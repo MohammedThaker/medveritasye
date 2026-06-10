@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Languages } from 'lucide-react';
+import { Link } from 'wouter';
 import { useTranslation } from 'react-i18next';
 
 export default function Navigation() {
@@ -36,13 +37,13 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo and Brand */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <a href="/" aria-label="Medveritas home" className="inline-flex items-center">
+            <Link href="/" aria-label="Medveritas home" className="inline-flex items-center">
               <img
                 src="/logo.png"
                 alt="Medveritas Logo"
                 className="h-8 sm:h-10 w-auto"
               />
-            </a>
+            </Link>
             <div className="block">
               <div className="text-black font-bold text-sm sm:text-base leading-tight">
                 Medveritas
@@ -56,7 +57,7 @@ export default function Navigation() {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8 xl:gap-12 flex-1 justify-center px-8">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 style={navTextStyle}
@@ -64,7 +65,7 @@ export default function Navigation() {
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#004c4a] group-hover:w-full transition-all duration-300" />
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -77,9 +78,9 @@ export default function Navigation() {
               <Languages size={18} />
               <span className="text-xs font-medium">{i18n.language === 'en' ? 'العربية' : 'EN'}</span>
             </button>
-            <a href="/#newsletter" style={navTextStyle} className="px-4 sm:px-6 py-2 border border-[#004c4a] text-[#004c4a] text-xs sm:text-sm font-medium rounded hover:bg-[#004c4a] hover:text-[#004c4a] transition-all duration-200 whitespace-nowrap">
+            <Link href="/#newsletter" style={navTextStyle} className="px-4 sm:px-6 py-2 border border-[#004c4a] text-[#004c4a] text-xs sm:text-sm font-medium rounded hover:bg-[#004c4a] hover:text-[#004c4a] transition-all duration-200 whitespace-nowrap">
               {t('nav.subscribe')}
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Language and Menu Button */}
@@ -105,7 +106,7 @@ export default function Navigation() {
         {isOpen && (
           <div className="lg:hidden pb-4 border-t border-[#004c4a]/30 bg-[oklch(0.76_0.17_129.57_/_0.18)] animate-slide-down">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 style={navTextStyle}
@@ -113,12 +114,12 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <div className="px-4 py-4 border-t border-[#004c4a]/30 flex flex-col gap-3">
-              <a href="/#newsletter" style={navTextStyle} className="w-full px-4 py-2 border border-[#004c4a] text-[#004c4a] text-sm font-medium rounded hover:bg-[#004c4a] hover:text-[#004c4a] transition-all text-center">
+              <Link href="/#newsletter" style={navTextStyle} className="w-full px-4 py-2 border border-[#004c4a] text-[#004c4a] text-sm font-medium rounded hover:bg-[#004c4a] hover:text-[#004c4a] transition-all text-center">
                 {t('nav.subscribe')}
-              </a>
+              </Link>
             </div>
           </div>
         )}
