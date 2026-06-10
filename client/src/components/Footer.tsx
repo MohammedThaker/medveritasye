@@ -2,7 +2,7 @@ import { Facebook, Twitter, Linkedin, Instagram, Youtube, Mail } from 'lucide-re
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
@@ -31,16 +31,22 @@ export default function Footer() {
         {/* Footer Content */}
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
-          <div className="md:col-span-1 animate-fade-in">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                <span className="text-slate-900 font-bold text-lg">MV</span>
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <a href="/" aria-label="Medveritas home" className="inline-flex items-center">
+              <img
+                src="/logo.png"
+                alt="Medveritas Logo"
+                className="h-8 sm:h-10 w-auto"
+              />
+            </a>
+            <div className="block">
+              <div className="text-white font-bold text-sm sm:text-base leading-tight">
+                Medveritas
               </div>
-              <span className="font-bold font-bold text-lg">Medveritas</span>
+              <div className="text-green-400 text-xs leading-tight">
+                {i18n.language === 'ar' ? 'ميدفرتاس للدراسات والبحوث' : 'For Studies & Research'}
+              </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              {t('footer.brand')}
-            </p>
           </div>
 
           {/* Links Columns */}
@@ -54,7 +60,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-gray-400 text-sm hover:text-yellow-400 transition-colors"
+                      className="text-gray-400 text-sm hover:text-green-400 transition-colors"
                     >
                       {link.label}
                     </a>
@@ -86,7 +92,7 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="text-gray-400 hover:text-yellow-400 transition-colors hover:scale-110 transform duration-200"
+                    className="text-gray-400 hover:text-green-400 transition-colors hover:scale-110 transform duration-200"
                   >
                     <Icon size={20} />
                   </a>
@@ -99,7 +105,7 @@ export default function Footer() {
             <p className="text-gray-400 text-sm mb-3">
               {t('footer.newsletterDesc')}
             </p>
-            <button className="text-yellow-400 hover:text-yellow-300 transition-colors text-sm font-semibold flex items-center gap-2">
+            <button className="text-green-400 hover:text-green-300 transition-colors text-sm font-semibold flex items-center gap-2">
               <Mail size={16} />
               {t('footer.subscribe')}
             </button>

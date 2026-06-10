@@ -10,7 +10,7 @@ const resources = {
         services: 'Services',
         research: 'Research',
         updates: 'Updates',
-        subscribe: 'Subscribe',
+        subscribe: 'Get in Touch',
       },
       hero: {
         title1: 'Rigorous',
@@ -95,7 +95,7 @@ const resources = {
         share: 'Share this update:',
         relatedUpdates: 'Related Updates',
         subscribe: 'Stay Updated',
-        subscribeDescription: 'Subscribe to our newsletter to receive the latest news and research findings.',
+        subscribeDescription: 'Get in Touch to our newsletter to receive the latest news and research findings.',
         content: 'This initiative represents a significant expansion of our capacity to deliver high-quality research and monitoring services across Yemen.',
       },
       contact: {
@@ -144,7 +144,7 @@ const resources = {
         backToResearch: 'Back to Research',
         backToUpdates: 'Back to Updates',
         contactUs: 'Contact Us',
-        subscribe: 'Subscribe',
+        subscribe: 'Get in Touch',
       },
       footer: {
         brand: 'Trusted insights. Stronger systems. Better outcomes.',
@@ -154,9 +154,9 @@ const resources = {
         follow: 'Follow Us',
         newsletter: 'Newsletter',
         newsletterDesc: 'Get updates on our latest research and insights',
-        subscribe: 'Subscribe',
+        subscribe: 'Get in Touch',
         copyright: '© 2026 Medveritas. All rights reserved.',
-        address: '📍 Sana\'a, Yemen',
+        address: ' Sana\'a, Yemen',
         serviceItems: {
           research: 'Research & Evaluation',
           monitoring: 'Third-Party Monitoring',
@@ -179,7 +179,7 @@ const resources = {
         services: 'خدماتنا',
         research: 'الأبحاث',
         updates: 'التحديثات',
-        subscribe: 'اشترك الآن',
+        subscribe: 'تواصل معانا',
       },
       hero: {
         title1: 'أدلة',
@@ -313,7 +313,7 @@ const resources = {
         backToResearch: 'العودة إلى الأبحاث',
         backToUpdates: 'العودة إلى التحديثات',
         contactUs: 'تواصل معنا',
-        subscribe: 'اشترك',
+        subscribe: 'تواصل معانا',
       },
       footer: {
         brand: 'رؤى موثوقة. أنظمة أقوى. نتائج أفضل.',
@@ -323,9 +323,9 @@ const resources = {
         follow: 'تابعنا',
         newsletter: 'النشرة الإخبارية',
         newsletterDesc: 'احصل على تحديثات حول أحدث أبحاثنا ورؤانا',
-        subscribe: 'اشترك',
+        subscribe: 'تواصل معانا',
         copyright: '© 2026 ميدفيريتاس. جميع الحقوق محفوظة.',
-        address: '📍 صنعاء، اليمن',
+        address: ' صنعاء، اليمن',
         serviceItems: {
           research: 'البحث والتقييم',
           monitoring: 'المراقبة من طرف ثالث',

@@ -27,10 +27,10 @@ export default function Newsletter() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up">
-            <button className="px-8 py-3 bg-yellow-400 text-slate-900 font-bold font-bold rounded hover:bg-yellow-300 transition-all duration-200 hover:shadow-lg active:scale-95">
+            <button className="px-8 py-3 bg-green-600 text-slate-900 font-bold font-bold rounded hover:bg-green-700 transition-all duration-200 hover:shadow-lg active:scale-95">
               Request a Proposal
             </button>
-            <button className="px-8 py-3 border-2 border-yellow-400 text-yellow-400 font-bold font-bold rounded hover:bg-yellow-400 hover:text-slate-900 transition-all duration-200">
+            <button className="px-8 py-3 border-2 border-green-600 text-green-600 font-bold font-bold rounded hover:bg-green-600 hover:text-slate-900 transition-all duration-200">
               Get in Touch
             </button>
           </div>
@@ -38,7 +38,7 @@ export default function Newsletter() {
           {/* Contact Info */}
           <div className="space-y-3 text-gray-300">
             <p className="flex items-center justify-center gap-2">
-              <span>📍</span>
+              <span></span>
               <span>Sana'a, Yemen</span>
             </p>
             <p className="flex items-center justify-center gap-2">

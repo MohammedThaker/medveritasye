@@ -24,8 +24,14 @@ export default function Navigation() {
     { label: t('common.contactUs'), href: '/contact' },
   ];
 
+  const navTextStyle = {
+    fontFamily: '"Graphik-Medium", sans-serif',
+    fontSize: '19px',
+    fontWeight: 700,
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-green-600/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-green-600/30">
       <div className="max-w-full px-4 sm:px-6 lg:px-30">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo and Brand */}
@@ -37,12 +43,12 @@ export default function Navigation() {
                 className="h-8 sm:h-10 w-auto"
               />
             </a>
-            <div className="hidden sm:block">
-              <div className="text-white font-bold text-sm sm:text-base leading-tight">
+            <div className="block">
+              <div className="text-black font-bold text-sm sm:text-base leading-tight">
                 Medveritas
               </div>
-              <div className="text-green-400 text-xs leading-tight">
-                {i18n.language === 'ar' ? 'للدراسات والبحوث' : 'Institute'}
+              <div className="text-[#004c4a] text-xs leading-tight">
+                {i18n.language === 'ar' ? 'ميدفرتاس للدراسات والبحوث' : 'For Studies & Research'}
               </div>
             </div>
           </div>
@@ -53,10 +59,11 @@ export default function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-white text-xs sm:text-sm font-medium hover:text-green-400 transition-colors duration-200 relative group whitespace-nowrap"
+                style={navTextStyle}
+                className="text-[#004c4a] text-xs sm:text-sm font-medium hover:text-[#004c4a] transition-colors duration-200 relative group whitespace-nowrap"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#004c4a] group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </div>
@@ -65,12 +72,12 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-2 text-white hover:text-green-400 transition-colors px-3 py-2 rounded hover:bg-slate-800"
+              className="flex items-center gap-2 text-[#004c4a] hover:text-[#004c4a] transition-colors px-3 py-2 rounded hover:bg-slate-800"
             >
               <Languages size={18} />
               <span className="text-xs font-medium">{i18n.language === 'en' ? 'العربية' : 'EN'}</span>
             </button>
-            <a href="/#newsletter" className="px-4 sm:px-6 py-2 border border-green-600 text-white text-xs sm:text-sm font-medium rounded hover:bg-green-600 hover:text-white transition-all duration-200 whitespace-nowrap">
+            <a href="/#newsletter" style={navTextStyle} className="px-4 sm:px-6 py-2 border border-[#004c4a] text-[#004c4a] text-xs sm:text-sm font-medium rounded hover:bg-[#004c4a] hover:text-[#004c4a] transition-all duration-200 whitespace-nowrap">
               {t('nav.subscribe')}
             </a>
           </div>
@@ -79,7 +86,7 @@ export default function Navigation() {
           <div className="lg:hidden flex items-center gap-2 sm:gap-3">
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-white hover:text-green-400 transition-colors p-2 rounded hover:bg-slate-800"
+              className="flex items-center gap-1 text-[#004c4a] hover:text-[#004c4a] transition-colors p-2 rounded hover:bg-slate-800"
               title={i18n.language === 'en' ? 'العربية' : 'English'}
             >
               <Languages size={18} />
@@ -87,7 +94,7 @@ export default function Navigation() {
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-green-400 transition-colors p-2 rounded hover:bg-slate-800"
+              className="text-[#004c4a] hover:text-[#004c4a] transition-colors p-2 rounded hover:bg-slate-800"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -96,19 +103,20 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden pb-4 border-t border-green-600/30 bg-slate-800 animate-slide-down">
+          <div className="lg:hidden pb-4 border-t border-[#004c4a]/30 bg-[oklch(0.76_0.17_129.57_/_0.18)] animate-slide-down">
             {menuItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block px-4 py-3 text-white text-sm hover:bg-green-600 hover:text-white transition-colors"
+                style={navTextStyle}
+                className="block px-4 py-3 text-[#004c4a] text-sm hover:bg-[#004c4a] hover:text-[#004c4a] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <div className="px-4 py-4 border-t border-green-600/30 flex flex-col gap-3">
-              <a href="/#newsletter" className="w-full px-4 py-2 border border-green-600 text-white text-sm font-medium rounded hover:bg-green-600 hover:text-white transition-all text-center">
+            <div className="px-4 py-4 border-t border-[#004c4a]/30 flex flex-col gap-3">
+              <a href="/#newsletter" style={navTextStyle} className="w-full px-4 py-2 border border-[#004c4a] text-[#004c4a] text-sm font-medium rounded hover:bg-[#004c4a] hover:text-[#004c4a] transition-all text-center">
                 {t('nav.subscribe')}
               </a>
             </div>

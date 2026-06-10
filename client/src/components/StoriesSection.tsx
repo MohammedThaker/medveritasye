@@ -51,7 +51,7 @@ export default function StoriesSection() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-300 transition-all duration-300 transform group-hover:scale-110">
+                  <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center group-hover:bg-yellow-300 transition-all duration-300 transform group-hover:scale-110">
                     <Play size={32} className="text-slate-900 fill-slate-900 ml-1" />
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function StoriesSection() {
               />
               <button
                 onClick={() => setSelectedVideo(null)}
-                className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-yellow-400 transition-colors"
+                className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-green-400 transition-colors"
               >
                 ✕
               </button>
