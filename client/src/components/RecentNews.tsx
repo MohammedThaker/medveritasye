@@ -1,26 +1,30 @@
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function RecentNews() {
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.language === 'ar';
+
   const news = [
     {
-      type: 'Case Study',
-      date: 'JUN 2026',
-      title: 'Reaching the Unreachable: 119-District Vaccination Survey',
-      description: 'How we delivered high-quality data across 119 hard-to-reach districts using adaptive field strategies and real-time monitoring.',
+      typeKey: 'recentNews.items.caseStudy.type',
+      dateKey: 'recentNews.items.caseStudy.date',
+      titleKey: 'recentNews.items.caseStudy.title',
+      descriptionKey: 'recentNews.items.caseStudy.description',
       link: '#insights-1'
     },
     {
-      type: 'Methodology',
-      date: 'MAY 2026',
-      title: 'LQAS in Practice: Rapid Quality Assessment in Conflict Zones',
-      description: 'Inside our LQAS approach to generate actionable evidence quickly—when decisions can\'t wait.',
+      typeKey: 'recentNews.items.methodology.type',
+      dateKey: 'recentNews.items.methodology.date',
+      titleKey: 'recentNews.items.methodology.title',
+      descriptionKey: 'recentNews.items.methodology.description',
       link: '#insights-2'
     },
     {
-      type: 'Sector Update',
-      date: 'APR 2026',
-      title: 'Beyond Health: Medveritas Expands into Education and Governance',
-      description: 'Strengthening systems and outcomes through evidence, analytics, and local partnerships.',
+      typeKey: 'recentNews.items.sectorUpdate.type',
+      dateKey: 'recentNews.items.sectorUpdate.date',
+      titleKey: 'recentNews.items.sectorUpdate.title',
+      descriptionKey: 'recentNews.items.sectorUpdate.description',
       link: '#insights-3'
     }
   ];
@@ -30,11 +34,11 @@ export default function RecentNews() {
       <div className="container">
         {/* Section Header */}
         <div className="mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold font-bold text-slate-900 mb-4">
-            Insights & Thought Leadership
+          <h2 className={`text-4xl md:text-5xl font-bold font-bold text-slate-900 mb-4 ${isRtl ? 'text-right' : ''}`}>
+            {t('recentNews.heading')}
           </h2>
-          <p className="text-lg text-gray-600 mb-4">
-            Research briefs, methodology spotlights, and sector analysis from our team
+          <p className={`text-lg text-gray-600 mb-4 ${isRtl ? 'text-right' : ''}`}>
+            {t('recentNews.subtitle')}
           </p>
           <div className="w-16 h-1 bg-green-600" />
         </div>
@@ -50,14 +54,14 @@ export default function RecentNews() {
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
-                  <p className="text-sm font-bold font-bold text-green-600 mb-2">
-                    {item.type} • {item.date}
+                  <p className={`text-sm font-bold font-bold text-green-600 mb-2 ${isRtl ? 'text-right' : ''}`}>
+                    {t(item.typeKey)} • {t(item.dateKey)}
                   </p>
-                  <h3 className="text-xl font-bold font-bold text-slate-900 group-hover:text-green-600 transition-colors mb-2">
-                    {item.title}
+                  <h3 className={`text-xl font-bold font-bold text-slate-900 group-hover:text-green-600 transition-colors mb-2 ${isRtl ? 'text-right' : ''}`}>
+                    {t(item.titleKey)}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    {item.description}
+                  <p className={`text-gray-600 text-sm ${isRtl ? 'text-right' : ''}`}>
+                    {t(item.descriptionKey)}
                   </p>
                 </div>
                 <ArrowRight className="flex-shrink-0 text-slate-900 group-hover:text-green-600 transition-colors mt-1" size={20} />
@@ -69,7 +73,7 @@ export default function RecentNews() {
         {/* More News Button */}
         <div className="text-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
           <button className="inline-flex items-center gap-2 px-8 py-3 border-2 border-slate-900 text-slate-900 font-bold font-bold rounded hover:bg-slate-900 hover:text-white transition-all duration-200">
-            View All Insights
+            {t('recentNews.button')}
             <ArrowRight size={20} />
           </button>
         </div>

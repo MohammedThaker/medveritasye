@@ -31,6 +31,10 @@ const resources = {
         button: 'Meet Our Team',
       },
       services: {
+        hero: {
+          title: 'Empowering evidence-based decisions across Yemen',
+          description: 'Our services combine research, monitoring, analytics, and capacity building to help organizations track progress and improve impact.',
+        },
         research: {
           title: 'Research & Evaluation',
           description: 'Rigorous research methodologies to understand complex social and economic challenges across Yemen.',
@@ -47,6 +51,55 @@ const resources = {
           title: 'Capacity Building',
           description: 'Build local expertise and institutional capacity for sustainable development.',
         },
+        methodology: {
+          title: 'Our Methodology',
+          step1: {
+            title: 'Assess',
+            desc: 'Evaluate program needs and design tailored research frameworks.',
+          },
+          step2: {
+            title: 'Collect',
+            desc: 'Deploy field teams to gather reliable data from all regions.',
+          },
+          step3: {
+            title: 'Analyze',
+            desc: 'Translate findings into strategic insights and actionable recommendations.',
+          },
+        },
+        cta: {
+          title: 'Ready to improve your impact?',
+          description: 'Partner with Medveritas to strengthen your monitoring, evaluation, and research capabilities.',
+          button: 'Contact Us',
+        },
+      },
+      bigBets: {
+        heading: 'Our Services',
+        subtitle: 'Comprehensive research, monitoring, and strategy solutions for complex environments',
+        learnMore: 'Learn More',
+        items: {
+          research: {
+            title: 'Research & Evaluation',
+            description: 'Impact evaluations, household surveys, and program assessments using LQAS and cluster sampling methodologies',
+          },
+          monitoring: {
+            title: 'Third-Party Monitoring',
+            description: 'Independent verification of humanitarian and development program implementation across all 34 governorates',
+          },
+          strategy: {
+            title: 'Strategy & Governance',
+            description: 'Institutional strengthening, policy analysis, and governance assessments for public and civil society organizations',
+          },
+          capacityBuilding: {
+            title: 'Capacity Building',
+            description: 'Training, mentoring, and organizational development for local NGOs, government bodies, and community groups',
+          },
+        },
+        stats: {
+          fieldStaff: 'Field Staff',
+          governorates: 'Governorates',
+          projects: 'Projects',
+          years: 'Years',
+        },
       },
       serviceDetail: {
         breadcrumb: 'SERVICE DETAILS',
@@ -54,7 +107,7 @@ const resources = {
         keyBenefits: 'Key Benefits',
         benefit1: { title: 'Credible Data', description: 'Collected using internationally recognized methodologies' },
         benefit2: { title: 'Local Expertise', description: 'Deep understanding of Yemen\'s context and challenges' },
-        benefit3: { title: 'Timely Delivery', description: 'Fast turnaround without compromising quality' },
+          benefit3: { title: 'Timely Delivery', description: 'Fast turnaround without compromising quality' },
         benefit4: { title: 'Actionable Insights', description: 'Data designed for decision-making' },
         methodology: 'Our Methodology',
         step1: { title: 'Design', description: 'Develop comprehensive research frameworks aligned with international standards' },
@@ -68,6 +121,70 @@ const resources = {
         health: { title: 'Health Systems Assessment', description: 'Understanding health systems, disease prevalence, and nutritional challenges in Yemen.' },
         education: { title: 'Education Outcomes Study', description: 'Evaluating educational outcomes and workforce development opportunities.' },
         economic: { title: 'Economic Livelihoods Analysis', description: 'Analyzing economic trends and livelihood opportunities for vulnerable populations.' },
+      },
+      recentNews: {
+        heading: 'Insights & Thought Leadership',
+        subtitle: 'Research briefs, methodology spotlights, and sector analysis from our team',
+        button: 'View All Insights',
+        items: {
+          caseStudy: {
+            type: 'Case Study',
+            date: 'JUN 2026',
+            title: 'Reaching the Unreachable: 119-District Vaccination Survey',
+            description: 'How we delivered high-quality data across 119 hard-to-reach districts using adaptive field strategies and real-time monitoring.',
+          },
+          methodology: {
+            type: 'Methodology',
+            date: 'MAY 2026',
+            title: 'LQAS in Practice: Rapid Quality Assessment in Conflict Zones',
+            description: 'Inside our LQAS approach to generate actionable evidence quickly—when decisions can\'t wait.',
+          },
+          sectorUpdate: {
+            type: 'Sector Update',
+            date: 'APR 2026',
+            title: 'Beyond Health: Medveritas Expands into Education and Governance',
+            description: 'Strengthening systems and outcomes through evidence, analytics, and local partnerships.',
+          },
+        },
+        list: [
+          {
+            type: 'Case Study',
+            date: 'JUN 2026',
+            title: 'Reaching the Unreachable: 119-District Vaccination Survey',
+            description: 'How we delivered high-quality data across 119 hard-to-reach districts using adaptive field strategies and real-time monitoring.',
+            link: '#insights-1',
+          },
+          {
+            type: 'Methodology',
+            date: 'MAY 2026',
+            title: 'LQAS in Practice: Rapid Quality Assessment in Conflict Zones',
+            description: 'Inside our LQAS approach to generate actionable evidence quickly—when decisions can\'t wait.',
+            link: '#insights-2',
+          },
+          {
+            type: 'Sector Update',
+            date: 'APR 2026',
+            title: 'Beyond Health: Medveritas Expands into Education and Governance',
+            description: 'Strengthening systems and outcomes through evidence, analytics, and local partnerships.',
+            link: '#insights-3',
+          },
+        ],
+      },
+      impactReport: {
+        featuredCaseStudy: 'Featured Case Study',
+        heading: 'Reaching the Unreachable: 119-District Vaccination Survey',
+        subheading: 'Building evidence and accountability for humanitarian systems',
+        copy: 'Our recent work blends field research, operational monitoring, and strategic insight to improve service delivery and donor confidence in fragile settings.',
+        cta: 'Download the full report',
+        stats: {
+          fieldStaff: 'Field Staff',
+          governorates: 'Governorates',
+          projects: 'Projects',
+          years: 'Years',
+        },
+        cardImageAlt: 'Research team in the field',
+        cardTitle: 'Strengthening local data systems',
+        cardCopy: 'We worked with partners to expand monitoring capacity and ensure timely, reliable evidence for decision-makers.',
       },
       researchDetail: {
         breadcrumb: 'RESEARCH DETAILS',
@@ -200,6 +317,10 @@ const resources = {
         button: 'تعرف على فريقنا',
       },
       services: {
+        hero: {
+          title: 'تمكين القرارات المبنية على الأدلة في أنحاء اليمن',
+          description: 'تجمع خدماتنا بين البحث والمراقبة والتحليل وبناء القدرات لمساعدة المؤسسات على تتبع التقدم وتحسين الأثر.',
+        },
         research: {
           title: 'البحث والتقييم',
           description: 'منهجيات بحثية صارمة لفهم التحديات الاجتماعية والاقتصادية المعقدة في اليمن.',
@@ -215,6 +336,55 @@ const resources = {
         capacityBuilding: {
           title: 'بناء القدرات',
           description: 'بناء الخبرة المحلية والقدرة المؤسسية للتنمية المستدامة.',
+        },
+        methodology: {
+          title: 'منهجيتنا',
+          step1: {
+            title: 'التقييم',
+            desc: 'تقييم احتياجات البرنامج وتصميم أطر بحثية مخصصة.',
+          },
+          step2: {
+            title: 'الجمع',
+            desc: 'نشر الفرق الميدانية لجمع بيانات موثوقة من جميع المناطق.',
+          },
+          step3: {
+            title: 'التحليل',
+            desc: 'تحويل النتائج إلى رؤى استراتيجية وتوصيات قابلة للتنفيذ.',
+          },
+        },
+        cta: {
+          title: 'هل أنت مستعد لتحسين تأثيرك؟',
+          description: 'تعاون مع ميدفيريتاس لتعزيز قدراتك في المراقبة والتقييم والبحث.',
+          button: 'اتصل بنا',
+        },
+      },
+      bigBets: {
+        heading: 'خدماتنا',
+        subtitle: 'حلول شاملة للبحث والمراقبة والاستراتيجية للبيئات المعقدة',
+        learnMore: 'اعرف أكثر',
+        items: {
+          research: {
+            title: 'البحث والتقييم',
+            description: 'تقييم الأثر، ومسوح الأسر، وتقييم البرامج باستخدام منهجيات LQAS والعينات العنقودية',
+          },
+          monitoring: {
+            title: 'المراقبة من طرف ثالث',
+            description: 'التحقق المستقل من تنفيذ البرامج الإنسانية والتنموية عبر جميع المحافظات الـ 34',
+          },
+          strategy: {
+            title: 'الاستراتيجية والحوكمة',
+            description: 'تعزيز المؤسسات، وتحليل السياسات، وتقييم الحوكمة للجهات العامة والمجتمع المدني',
+          },
+          capacityBuilding: {
+            title: 'بناء القدرات',
+            description: 'التدريب، والتوجيه، والتنمية التنظيمية للمنظمات المحلية والهيئات الحكومية والمجموعات المجتمعية',
+          },
+        },
+        stats: {
+          fieldStaff: 'الموظفون الميدانيون',
+          governorates: 'المحافظات',
+          projects: 'المشاريع',
+          years: 'السنوات',
         },
       },
       serviceDetail: {
@@ -237,6 +407,70 @@ const resources = {
         health: { title: 'تقييم الأنظمة الصحية', description: 'فهم الأنظمة الصحية والأمراض السائدة والتحديات الغذائية في اليمن.' },
         education: { title: 'دراسة نتائج التعليم', description: 'تقييم النتائج التعليمية وفرص تطوير القوى العاملة.' },
         economic: { title: 'تحليل سبل العيش الاقتصادية', description: 'تحليل الاتجاهات الاقتصادية وفرص العيش للسكان الضعفاء.' },
+      },
+      recentNews: {
+        heading: 'رؤى وقيادة فكرية',
+        subtitle: 'موجزات بحثية، تسليط الضوء على المنهجية، وتحليل القطاع من فريقنا',
+        button: 'عرض جميع الرؤى',
+        items: {
+          caseStudy: {
+            type: 'دراسة حالة',
+            date: 'يونيو 2026',
+            title: 'الوصول إلى المستهدفين غير القابلين للوصول: مسح تطعيم في 119 مديرية',
+            description: 'كيف قدمنا بيانات عالية الجودة عبر 119 مديرية يصعب الوصول إليها باستخدام استراتيجيات ميدانية متكيفة ومراقبة فورية.',
+          },
+          methodology: {
+            type: 'المنهجية',
+            date: 'مايو 2026',
+            title: 'LQAS في الممارسة: التقييم النوعي السريع في مناطق النزاع',
+            description: 'داخل نهجنا LQAS لتوليد أدلة قابلة للتنفيذ بسرعة عندما لا يمكن للقرارات الانتظار.',
+          },
+          sectorUpdate: {
+            type: 'تحديث قطاعي',
+            date: 'أبريل 2026',
+            title: 'ما بعد الصحة: ميدفيريتاس تتوسع في التعليم والحوكمة',
+            description: 'تعزيز الأنظمة والنتائج من خلال الأدلة والتحليلات والشراكات المحلية.',
+          },
+        },
+        list: [
+          {
+            type: 'دراسة حالة',
+            date: 'يونيو 2026',
+            title: 'الوصول إلى المستهدفين غير القابلين للوصول: مسح تطعيم في 119 مديرية',
+            description: 'كيف قدمنا بيانات عالية الجودة عبر 119 مديرية يصعب الوصول إليها باستخدام استراتيجيات ميدانية متكيفة ومراقبة فورية.',
+            link: '#insights-1',
+          },
+          {
+            type: 'المنهجية',
+            date: 'مايو 2026',
+            title: 'LQAS في الممارسة: التقييم النوعي السريع في مناطق النزاع',
+            description: 'داخل نهجنا LQAS لتوليد أدلة قابلة للتنفيذ بسرعة عندما لا يمكن للقرارات الانتظار.',
+            link: '#insights-2',
+          },
+          {
+            type: 'تحديث قطاعي',
+            date: 'أبريل 2026',
+            title: 'ما بعد الصحة: ميدفيريتاس تتوسع في التعليم والحوكمة',
+            description: 'تعزيز الأنظمة والنتائج من خلال الأدلة والتحليلات والشراكات المحلية.',
+            link: '#insights-3',
+          },
+        ],
+      },
+      impactReport: {
+        featuredCaseStudy: 'دراسة حالة مميزة',
+        heading: 'أبرز أبحاث التأثير',
+        subheading: 'بناء الأدلة والمساءلة لأنظمة العمل الإنساني',
+        copy: 'يجمع عملنا الأخير بين البحث الميداني، والمراقبة التشغيلية، والرؤية الإستراتيجية لتحسين تقديم الخدمات وثقة المانحين في البيئات الهشة.',
+        cta: 'تحميل التقرير الكامل',
+        stats: {
+          fieldStaff: 'الموظفون الميدانيون على الأرض',
+          governorates: 'المحافظات المشمولة',
+          projects: 'المشاريع النشطة',
+          years: 'سنوات الخبرة',
+        },
+        cardImageAlt: 'فريق بحث في الميدان',
+        cardTitle: 'تعزيز نظم البيانات المحلية',
+        cardCopy: 'عملنا مع الشركاء لتوسيع قدرات المراقبة وضمان أدلة موثوقة وفي الوقت المناسب لصانعي القرار.',
       },
       researchDetail: {
         breadcrumb: 'تفاصيل البحث',
